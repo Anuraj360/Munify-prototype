@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Committee - MUNify</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/admin.css">
+</head>
+<body class="mun-dashboard-body">
+
+  <div class="create-committee-page-container">
+    
+    <!-- Top Header Bar -->
+    <header class="create-committee-top-bar">
+      <h1 class="create-committee-main-heading">Create Committee</h1>
+      <a href="committees.html" class="create-committee-back-link" id="backDashboardLink">
+        &larr; Dashboard
+      </a>
+    </header>
+
+    <!-- Main Centered Form Card -->
+    <main class="create-committee-card">
+      <form id="createCommitteeForm" novalidate>
+        
+        <!-- Basic Information Section -->
+        <h2 class="form-section-title">Basic Information</h2>
+
+        <!-- Committee Name -->
+        <div class="create-comm-field-group">
+          <label for="committeeNameInput" class="create-comm-label">Committee Name</label>
+          <input 
+            type="text" 
+            id="committeeNameInput" 
+            class="create-comm-input" 
+            placeholder="e.g. UNHRC" 
+            required
+          >
+        </div>
+
+        <!-- Agenda / Topic -->
+        <div class="create-comm-field-group">
+          <label for="agendaTextarea" class="create-comm-label">Agenda / Topic</label>
+          <div class="input-with-icon-wrapper">
+            <textarea 
+              id="agendaTextarea" 
+              class="create-comm-textarea" 
+              placeholder="Describe the main topic of discussion..." 
+              required
+            ></textarea>
+            <div id="agendaFeedbackIcon" class="textarea-feedback-icon" style="display: none;"></div>
+          </div>
+          <span id="agendaErrorMsg" class="validation-error-text" style="display: none;">Agenda must be valid</span>
+        </div>
+
+        <!-- Total Seats & Committee Status Row -->
+        <div class="two-col-form-row">
+          <div class="create-comm-field-group" style="margin-bottom: 0;">
+            <label for="totalSeatsInput" class="create-comm-label">Total Seats</label>
+            <div class="input-with-icon-wrapper">
+              <input 
+                type="number" 
+                id="totalSeatsInput" 
+                class="create-comm-input" 
+                value="30" 
+                min="1" 
+                max="200"
+              >
+              <div id="seatsFeedbackIcon" class="input-feedback-icon"></div>
+            </div>
+          </div>
+
+          <div class="create-comm-field-group" style="margin-bottom: 0;">
+            <label class="create-comm-label">Committee Status</label>
+            <div class="toggle-switch-container">
+              <label class="switch-toggle-label">
+                <input type="checkbox" id="statusToggleCheckbox">
+                <span class="switch-toggle-slider"></span>
+              </label>
+              <span id="statusToggleText" class="toggle-status-text">Inactive</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add Countries Section -->
+        <h2 class="form-section-title" style="margin-top: 28px;">Add Countries</h2>
+
+        <!-- Search Header & Controls -->
+        <div class="country-search-header-row">
+          <label for="searchCountryInput" class="create-comm-label" style="margin-bottom: 0;">Search Countries</label>
+          <span id="countryCounterText" class="country-counter-text">0 / 30</span>
+        </div>
+
+        <div class="country-search-controls-row">
+          <div class="country-search-input-wrapper">
+            <input 
+              type="text" 
+              id="searchCountryInput" 
+              class="country-search-input" 
+              placeholder="Search countries..."
+              autocomplete="off"
+            >
+            <!-- Floating Countries Dropdown List -->
+            <div id="countriesDropdownList" class="country-dropdown-list" style="display: none;">
+              <!-- Populated by JavaScript with flags, checkboxes and country names -->
+            </div>
+          </div>
+          <button type="button" id="btnAddSelected" class="btn-add-selected-countries">Add Selected</button>
+        </div>
+
+        <!-- Selected Countries Section (Always visible) -->
+        <div id="selectedCountriesWrapper" class="selected-countries-wrapper">
+          <h3 class="selected-countries-heading">Selected Countries</h3>
+          <div id="selectedChipsContainer" class="selected-chips-container">
+            <div class="no-countries-placeholder">No countries added yet.</div>
+          </div>
+        </div>
+
+        <!-- Create Committee Submit Button -->
+        <button type="submit" id="btnSubmitCommittee" class="btn-submit-create-committee">
+          Create Committee
+        </button>
+
+      </form>
+    </main>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../../js/admin/create-committee.js"></script>
+</body>
+</html>

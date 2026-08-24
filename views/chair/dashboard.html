@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chair Dashboard - MUNify</title>
+  <link rel="stylesheet" href="../../css/common.css">
+  <style>
+    .chair-dashboard-page {
+      background-color: var(--color-bg-light);
+      min-height: calc(100vh - 72px - 90px);
+      padding: 48px 24px;
+    }
+    .chair-container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .chair-header {
+      background: var(--color-white);
+      padding: 32px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 43, 73, 0.06);
+      margin-bottom: 28px;
+    }
+    .chair-header h1 {
+      color: var(--color-navy);
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .chair-header p {
+      color: var(--color-text-muted);
+      font-size: 15px;
+    }
+    .badge-chair {
+      display: inline-block;
+      background-color: var(--color-navy);
+      color: var(--color-yellow);
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar" id="mainNavbar">
+      <div class="navbar-container">
+        <div class="navbar-brand">
+          <a href="../user/index.html" class="navbar-logo" id="brandLogo">MUNify</a>
+        </div>
+        <ul class="navbar-nav" id="navbarLinks">
+          <li><a href="../user/index.html" class="nav-link">Overview</a></li>
+          <li><a href="../user/about.html" class="nav-link">About</a></li>
+          <li><a href="../user/contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+        <div class="navbar-actions">
+          <a href="../user/login.html" class="btn-yellow">Logout</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="chair-dashboard-page">
+    <div class="chair-container">
+      <div class="chair-header">
+        <span class="badge-chair">Executive Board &amp; Chair Portal</span>
+        <h1>Welcome, Committee Chair</h1>
+        <p>Manage committee proceedings, general speakers list (GSL), moderated caucuses, and live voting.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer" id="mainFooter">
+    <p class="footer-text">&copy; 2026 MUNify Platform. All rights reserved.</p>
+  </footer>
+</body>
+</html>

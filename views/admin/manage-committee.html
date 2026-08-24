@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Committee - MUNify</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/admin.css">
+</head>
+<body class="manage-committee-body">
+
+  <div class="manage-committee-page-container">
+    
+    <!-- Top-Left Navigation Button -->
+    <div class="manage-committee-top-bar">
+      <a href="mun-dashboard.html" class="mc-btn-back" id="btnBackToDashboard">
+        &larr; Back to Dashboard
+      </a>
+    </div>
+
+    <!-- 1. Committee Header Card -->
+    <div class="mc-card mc-header-card" id="mcHeaderCard">
+      <div class="mc-header-left">
+        <h1 class="mc-committee-title" id="mcCommitteeName">UNHRC</h1>
+        <p class="mc-committee-agenda" id="mcCommitteeAgenda">Agenda: Human Resources</p>
+      </div>
+      <div class="mc-header-right">
+        <span class="mc-status-badge inactive" id="mcStatusBadge">INACTIVE</span>
+      </div>
+    </div>
+
+    <!-- 2. Statistics Cards (Row of 3 Equal Cards) -->
+    <div class="mc-stats-row" id="mcStatsRow">
+      <div class="mc-stat-card">
+        <div class="mc-stat-label">TOTAL COUNTRIES</div>
+        <div class="mc-stat-value" id="mcTotalCountriesVal">10</div>
+      </div>
+      <div class="mc-stat-card">
+        <div class="mc-stat-label">COUNTRIES ASSIGNED</div>
+        <div class="mc-stat-value" id="mcAssignedCountriesVal">1</div>
+      </div>
+      <div class="mc-stat-card">
+        <div class="mc-stat-label">VACANT SEATS</div>
+        <div class="mc-stat-value" id="mcVacantSeatsVal">9</div>
+      </div>
+    </div>
+
+    <!-- 3. Country Allocation Card -->
+    <div class="mc-card mc-allocation-card" id="mcAllocationCard">
+      <div class="mc-card-header-row">
+        <h2 class="mc-card-title">Country Allocation</h2>
+        <div class="mc-card-actions">
+          <button type="button" class="mc-btn-outlined" id="btnAutoAssignCountries">Auto Assign Countries</button>
+          <button type="button" class="mc-btn-green" id="btnLockAllAllocations">Lock All Allocations</button>
+        </div>
+      </div>
+      
+      <div class="mc-table-container">
+        <table class="mc-table">
+          <thead>
+            <tr>
+              <th>COUNTRY NAME</th>
+              <th>ASSIGNED DELEGATE</th>
+              <th>STATUS</th>
+            </tr>
+          </thead>
+          <tbody id="mcAllocationTableBody">
+            <!-- Dynamically populated -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 4. Assign Chair & Co-Chair Card -->
+    <div class="mc-card mc-chairs-card" id="mcChairsCard">
+      <div class="mc-card-header-row">
+        <h2 class="mc-card-title">Assign Chair & Co-Chair</h2>
+        <button type="button" class="mc-btn-outlined" id="btnToggleAddChairForm">Add Chair</button>
+      </div>
+      
+      <p class="mc-instruction-text">
+        Select two delegates from the list below to assign them as Chair and Co-Chair. Click once for Chair, click another for Co-Chair.
+      </p>
+
+      <!-- Chair Candidates Grid -->
+      <div class="mc-chairs-grid" id="mcChairsGrid">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- Add New Chair Form (Inline Card) -->
+      <div class="mc-add-chair-form-card" id="mcAddChairFormCard" style="display: none;">
+        <h3 class="mc-add-chair-title">Add New Chair</h3>
+        <form id="addChairInlineForm" class="mc-add-chair-form">
+          <input type="text" id="newChairName" class="mc-form-input" placeholder="Name" required autocomplete="off">
+          <input type="email" id="newChairEmail" class="mc-form-input" placeholder="Email" required autocomplete="off">
+          <input type="password" id="newChairPassword" class="mc-form-input" placeholder="Password" required autocomplete="off">
+          <button type="submit" class="mc-btn-green" id="btnSubmitNewChair">Add</button>
+          <button type="button" class="mc-btn-outlined" id="btnCancelNewChair">Cancel</button>
+        </form>
+      </div>
+
+      <!-- Bottom Right Button -->
+      <div class="mc-chairs-footer-row" id="mcChairsFooterRow">
+        <button type="button" class="mc-btn-navy" id="btnAssignRoles">Assign Roles</button>
+      </div>
+    </div>
+
+    <!-- 5. Manage Countries Card -->
+    <div class="mc-card mc-manage-countries-card" id="mcManageCountriesCard">
+      <div class="mc-card-header-row">
+        <h2 class="mc-card-title">Manage Countries</h2>
+        <span class="mc-limit-badge" id="mcLimitBadge">Limit Reached (10/10)</span>
+      </div>
+
+      <div class="mc-countries-grid-container" id="mcCountriesGridContainer">
+        <!-- 4-column grid of country chips -->
+      </div>
+    </div>
+
+    <!-- 6. Committee Delegates Card -->
+    <div class="mc-card mc-delegates-card" id="mcDelegatesCard">
+      <div class="mc-card-header-row">
+        <h2 class="mc-card-title">Committee Delegates</h2>
+      </div>
+
+      <div class="mc-table-container">
+        <table class="mc-table">
+          <thead>
+            <tr>
+              <th>NAME</th>
+              <th>COUNTRY</th>
+              <th>STATUS</th>
+            </tr>
+          </thead>
+          <tbody id="mcCommitteeDelegatesTableBody">
+            <!-- Delegate rows -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Toast Notification Container (Upper Right) -->
+  <div id="mcToastContainer" class="mc-toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="../../js/admin/manage-committee.js"></script>
+</body>
+</html>

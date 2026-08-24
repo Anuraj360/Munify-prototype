@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create New MUN - MUNify</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/admin.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Header & Navigation Bar
+       ========================================================================== -->
+  <header>
+    <nav class="navbar" id="mainNavbar">
+      <div class="navbar-container">
+        <!-- Brand Logo -->
+        <div class="navbar-brand">
+          <a href="../user/index.html" class="navbar-logo" id="brandLogo">MUNify</a>
+        </div>
+
+        <!-- Mobile Navigation Toggle -->
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          ☰
+        </button>
+
+        <!-- Center Navigation Links -->
+        <ul class="navbar-nav" id="navbarLinks">
+          <li><a href="../user/index.html" class="nav-link" id="navOverview">Overview</a></li>
+          <li><a href="../user/about.html" class="nav-link" id="navAbout">About</a></li>
+          <li><a href="../user/contact.html" class="nav-link" id="navContact">Contact Us</a></li>
+        </ul>
+
+        <!-- Right Action Controls (Profile & Logout) -->
+        <div class="navbar-actions">
+          <a href="#" class="admin-nav-profile" id="adminProfileLink" aria-label="Admin Profile">
+            <svg class="admin-profile-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2ZM12 5C13.657 5 15 6.343 15 8C15 9.657 13.657 11 12 11C10.343 11 9 9.657 9 8C9 6.343 10.343 5 12 5ZM6.883 17.132C7.818 15.228 9.76 14 12 14C14.24 14 16.182 15.228 17.117 17.132C15.773 18.298 13.973 19 12 19C10.027 19 8.227 18.298 6.883 17.132Z" />
+            </svg>
+            <span>Profile</span>
+          </a>
+          <a href="../user/login.html" class="btn-admin-logout" id="adminLogoutBtn">Logout</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==========================================================================
+       Main Content: Create New MUN Form
+       ========================================================================== -->
+  <main class="create-mun-page">
+    <div class="create-mun-container">
+      
+      <!-- Top Title and Red Cancel Button Row -->
+      <div class="create-mun-header-row">
+        <h1 class="create-mun-title" id="createMunHeading">Create New MUN</h1>
+        <a href="dashboard.html" class="btn-cancel-red" id="btnCancelCreate">Cancel</a>
+      </div>
+
+      <!-- Error Alert Message Banner -->
+      <div class="form-alert-error" id="formAlertError" role="alert"></div>
+
+      <!-- Create MUN Form -->
+      <form id="createMunForm" class="create-mun-form" novalidate>
+        
+        <!-- Field 1: MUN Name -->
+        <div class="form-group" id="groupMunName">
+          <label for="munName" class="form-label">MUN Name</label>
+          <input 
+            type="text" 
+            id="munName" 
+            name="munName" 
+            class="form-input" 
+            placeholder="e.g. KIT MUN 2026" 
+            required
+            autocomplete="off"
+          >
+        </div>
+
+        <!-- Field 2 & 3: Conference Date & Registration Deadline (Side by Side) -->
+        <div class="form-row-2col" id="groupDates">
+          <div class="form-group" id="groupConferenceDate">
+            <label for="conferenceDate" class="form-label">Conference Date</label>
+            <input 
+              type="date" 
+              id="conferenceDate" 
+              name="conferenceDate" 
+              class="form-input form-date-input" 
+              required
+            >
+          </div>
+          <div class="form-group" id="groupRegistrationDeadline">
+            <label for="registrationDeadline" class="form-label">Registration Deadline</label>
+            <input 
+              type="date" 
+              id="registrationDeadline" 
+              name="registrationDeadline" 
+              class="form-input form-date-input" 
+              required
+            >
+          </div>
+        </div>
+
+        <!-- Field 4: Location -->
+        <div class="form-group" id="groupLocation">
+          <label for="munLocation" class="form-label">Location</label>
+          <input 
+            type="text" 
+            id="munLocation" 
+            name="munLocation" 
+            class="form-input" 
+            placeholder="e.g. Nagpur, India" 
+            required
+            autocomplete="off"
+          >
+        </div>
+
+        <!-- Field 5: Description -->
+        <div class="form-group" id="groupDescription">
+          <label for="munDescription" class="form-label">Description</label>
+          <textarea 
+            id="munDescription" 
+            name="munDescription" 
+            class="form-textarea" 
+            placeholder="Enter a short description of the conference" 
+            required
+          ></textarea>
+        </div>
+
+        <!-- Field 6: Image URL / File Upload -->
+        <div class="form-group" id="groupImage">
+          <label for="munImage" class="form-label">Image URL</label>
+          <div class="file-input-wrapper">
+            <input 
+              type="file" 
+              id="munImage" 
+              name="munImage" 
+              class="form-file-input" 
+              accept="image/png, image/jpeg, image/jpg, image/webp"
+            >
+          </div>
+        </div>
+
+        <!-- Create MUN Submit Button -->
+        <button type="submit" class="btn-submit-mun" id="btnSubmitMun">Create MUN</button>
+
+      </form>
+
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="../../js/admin/create-mun.js"></script>
+</body>
+</html>

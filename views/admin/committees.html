@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Committees - MUNify</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/admin.css">
+</head>
+<body class="mun-dashboard-body">
+
+  <!-- Mobile Toggle Button for Sidebar on Small Screens -->
+  <button class="mun-sidebar-mobile-toggle" id="sidebarMobileToggle" aria-label="Toggle Sidebar Menu">
+    ☰
+  </button>
+
+  <div class="mun-dashboard-layout" id="dashboardLayout">
+    
+    <!-- ==========================================================================
+         Left Sidebar
+         ========================================================================== -->
+    <aside class="mun-sidebar" id="munSidebar">
+      <!-- Top Brand Logo -->
+      <div class="sidebar-header">
+        <a href="dashboard.html" class="sidebar-brand-logo" id="sidebarBrandLogo">MUNify</a>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="sidebar-nav-container">
+        <ul class="sidebar-nav-list" id="sidebarNavList">
+          <li>
+            <a href="mun-dashboard.html" class="sidebar-nav-link" id="navItemOverview">
+              Overview
+            </a>
+          </li>
+          <li>
+            <a href="delegates.html" class="sidebar-nav-link" id="navItemDelegates">
+              Delegates
+            </a>
+          </li>
+          <li>
+            <a href="committees.html" class="sidebar-nav-link active" id="navItemCommittees">
+              Committees
+            </a>
+          </li>
+          <li>
+            <a href="mun-dashboard.html#settings" class="sidebar-nav-link" id="navItemSettings">
+              Settings
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Bottom Full-Width Red Logout Button -->
+      <div class="sidebar-footer">
+        <button type="button" class="btn-sidebar-logout" id="sidebarLogoutBtn">
+          Logout
+        </button>
+      </div>
+    </aside>
+
+    <!-- ==========================================================================
+         Main Content Area
+         ========================================================================== -->
+    <main class="mun-main-content" id="munMainContent">
+      
+      <!-- Top Header Row -->
+      <header class="conference-header-row">
+        <div class="conference-heading-group">
+          <h1 class="conference-main-title" id="pageMainHeading">Committees</h1>
+          <p class="conference-sub-info" id="confSubtitleInfo">KIT MUN &bull; Kolhapur</p>
+        </div>
+
+        <!-- Top Right Action Controls -->
+        <div class="conference-actions-group">
+          <button type="button" class="btn-conf-action btn-conf-light" id="btnDisplayResults">Display Results</button>
+          <button type="button" class="btn-conf-action btn-conf-green" id="btnGenerateCertificates">Generate Certificates</button>
+          <a href="mun-dashboard.html" class="btn-conf-action btn-conf-red" id="btnBackToConfOverview">Back</a>
+        </div>
+      </header>
+
+      <!-- Manage Committees Section Matching Screenshot UI Reference -->
+      <section class="manage-committees-section" id="manageCommitteesSection">
+        
+        <!-- Header Row with Manage Committees Title and Create Committee Button -->
+        <div class="manage-committees-header-row">
+          <h2 class="manage-committees-title" id="manageCommitteesHeading">Manage Committees</h2>
+          <a href="create-committee.html" class="btn-create-committee" id="btnOpenCreateCommitteePage">
+            Create Committee
+          </a>
+        </div>
+
+        <!-- Committee Cards Grid -->
+        <div class="committees-cards-grid" id="committeesCardsGrid">
+          <!-- Dynamically populated via js/admin/committees.js -->
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- Modal: Create Committee -->
+  <div class="admin-profile-modal-overlay" id="createCommitteeModalOverlay">
+    <div class="admin-profile-modal" style="max-width: 540px;">
+      <div class="admin-profile-modal-header">
+        <h2 class="admin-profile-modal-title" id="createCommitteeModalTitle">Create New Committee</h2>
+        <button type="button" class="admin-profile-modal-close" id="closeCreateCommModalBtn">&times;</button>
+      </div>
+      <form id="createCommitteeForm">
+        <div class="admin-profile-modal-body">
+          <div class="form-group-row">
+            <label for="newCommName">Committee Name / Acronym *</label>
+            <input 
+              type="text" 
+              class="form-input-text" 
+              id="newCommName" 
+              placeholder="e.g. UNHRC, WHO, UNSC, UNGA" 
+              required
+            >
+          </div>
+
+          <div class="form-group-row">
+            <label for="newCommFullName">Full Committee Name (Optional)</label>
+            <input 
+              type="text" 
+              class="form-input-text" 
+              id="newCommFullName" 
+              placeholder="e.g. United Nations Human Rights Council"
+            >
+          </div>
+
+          <div class="form-group-row">
+            <label for="newCommAgenda">Agenda / Topic *</label>
+            <textarea 
+              class="form-textarea" 
+              id="newCommAgenda" 
+              rows="3" 
+              placeholder="e.g. Human Resources, Global Health and Pandemic Preparedness" 
+              required
+            ></textarea>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="form-group-row">
+              <label for="newCommChairs">Executive Board / Chairs</label>
+              <input 
+                type="number" 
+                class="form-input-text" 
+                id="newCommChairs" 
+                value="2" 
+                min="1" 
+                max="10"
+              >
+            </div>
+            <div class="form-group-row">
+              <label for="newCommDelegates">Total Seats / Size</label>
+              <input 
+                type="number" 
+                class="form-input-text" 
+                id="newCommDelegates" 
+                value="25" 
+                min="1" 
+                max="200"
+              >
+            </div>
+          </div>
+        </div>
+        <div class="admin-profile-modal-footer">
+          <button type="button" class="btn-profile-close" id="dismissCreateCommModalBtn">Cancel</button>
+          <button type="submit" class="btn-create-committee" id="btnSubmitCreateCommittee">Create Committee</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal: Display Results -->
+  <div class="admin-profile-modal-overlay" id="resultsModalOverlay">
+    <div class="admin-profile-modal" style="max-width: 600px;">
+      <div class="admin-profile-modal-header">
+        <h2 class="admin-profile-modal-title" id="resultsModalTitle">Conference Results</h2>
+        <button type="button" class="admin-profile-modal-close" id="closeResultsModalBtn">&times;</button>
+      </div>
+      <div class="admin-profile-modal-body" id="resultsModalBody">
+        <p style="color:#4b5563; font-size: 15px; margin-bottom: 16px;">Official results and award distribution for this conference:</p>
+        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:16px; font-size:14px; color:#334155;">
+          <div style="font-weight:700; margin-bottom:6px;" id="resultsConfNameHeader">Conference Results</div>
+          <p style="margin:0; color:#64748b;">Results tabulation will be finalized upon completion of all committee sessions and chair evaluations.</p>
+        </div>
+      </div>
+      <div class="admin-profile-modal-footer">
+        <button type="button" class="btn-profile-close" id="dismissResultsModalBtn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Generate Certificates -->
+  <div class="admin-profile-modal-overlay" id="certificatesModalOverlay">
+    <div class="admin-profile-modal" style="max-width: 600px;">
+      <div class="admin-profile-modal-header">
+        <h2 class="admin-profile-modal-title" id="certModalTitle">Generate Certificates</h2>
+        <button type="button" class="admin-profile-modal-close" id="closeCertModalBtn">&times;</button>
+      </div>
+      <div class="admin-profile-modal-body" id="certModalBody">
+        <p style="color:#4b5563; font-size: 15px; margin-bottom: 16px;">Automated Certificate Generator:</p>
+        <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:16px; font-size:14px; color:#166534;">
+          <div style="font-weight:700; margin-bottom:4px;" id="certConfNameHeader">Certificates System Ready</div>
+          <p style="margin:0;">Certificates of Participation, Merit, and Secretariat commendations configured for eligible delegates and executive board members.</p>
+        </div>
+      </div>
+      <div class="admin-profile-modal-footer">
+        <button type="button" class="btn-conf-action btn-conf-green" id="btnDownloadBatchCert">Download Batch</button>
+        <button type="button" class="btn-profile-close" id="dismissCertModalBtn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../../js/admin/committees.js"></script>
+</body>
+</html>

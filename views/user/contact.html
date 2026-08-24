@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - MUNify</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/contact.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Header & Navbar
+       ========================================================================== -->
+  <header>
+    <nav class="navbar" id="mainNavbar">
+      <div class="navbar-container">
+        <!-- Brand Logo -->
+        <div class="navbar-brand">
+          <a href="index.html" class="navbar-logo" id="brandLogo">MUNify</a>
+        </div>
+
+        <!-- Mobile Navigation Toggle -->
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          ☰
+        </button>
+
+        <!-- Center Navigation Links -->
+        <ul class="navbar-nav" id="navbarLinks">
+          <li><a href="index.html" class="nav-link" id="navOverview">Overview</a></li>
+          <li><a href="about.html" class="nav-link" id="navAbout">About</a></li>
+          <li><a href="contact.html" class="nav-link" id="navContact">Contact Us</a></li>
+        </ul>
+
+        <!-- Right Action Buttons -->
+        <div class="navbar-actions">
+          <a href="login.html" class="btn-yellow" id="btnLogin">Login</a>
+          <a href="signup.html" class="btn-yellow" id="btnSignup">Signup</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==========================================================================
+       Main Content: Contact Us
+       ========================================================================== -->
+  <main class="contact-page">
+    <div class="contact-container">
+      <h1 class="contact-title" id="contactMainHeading">Contact Us</h1>
+
+      <!-- Main Contact Card -->
+      <div class="contact-card" id="contactCard">
+        <!-- Left Column: Information -->
+        <div class="contact-info-col" id="contactInfoCol">
+          <h2 class="contact-info-title" id="getInTouchHeading">Get in Touch</h2>
+
+          <div class="contact-details-list">
+            <div class="contact-detail-item" id="contactEmailDetail">
+              <strong>Email:</strong>
+              <a href="mailto:ashutoshmukherjee1818@gmail.com">ashutoshmukherjee1818@gmail.com</a>
+            </div>
+
+            <div class="contact-detail-item" id="contactPhoneDetail">
+              <strong>Phone:</strong>
+              <a href="tel:+919028271896">+91 9028271896</a>
+            </div>
+
+            <div class="contact-detail-item" id="contactAddressDetail">
+              <strong>Address:</strong>
+              <span>Kolhapur, Maharashtra, India</span>
+            </div>
+          </div>
+
+          <p class="contact-info-desc" id="contactInfoDescription">
+            We are here to answer any questions you may have about our platform or upcoming conferences. Reach out to us and we'll respond as soon as we can.
+          </p>
+        </div>
+
+        <!-- Right Column: Form -->
+        <div class="contact-form-col" id="contactFormCol">
+          <form class="contact-form" id="contactForm" novalidate>
+            <!-- Name Field -->
+            <div class="form-group">
+              <label for="contactName" class="form-label">Name</label>
+              <input 
+                type="text" 
+                id="contactName" 
+                name="name" 
+                class="form-input" 
+                placeholder="Enter your name"
+                required
+              >
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group">
+              <label for="contactEmail" class="form-label">Email</label>
+              <input 
+                type="email" 
+                id="contactEmail" 
+                name="email" 
+                class="form-input" 
+                placeholder="Enter your email"
+                required
+              >
+            </div>
+
+            <!-- Message Field -->
+            <div class="form-group">
+              <label for="contactMessage" class="form-label">Message</label>
+              <textarea 
+                id="contactMessage" 
+                name="message" 
+                class="form-textarea" 
+                placeholder="Enter your message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+
+            <!-- Status message container -->
+            <div class="form-status-message" id="formStatusMessage" role="alert"></div>
+
+            <!-- Send Message Button -->
+            <button type="submit" class="btn-submit-message" id="btnSendMessage">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="footer" id="mainFooter">
+    <p class="footer-text" id="footerText">&copy; 2026 MUNify Platform. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../../js/contact.js"></script>
+</body>
+</html>

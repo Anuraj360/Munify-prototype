@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MUNify - Delegate Dashboard</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/user-dashboard.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Header & Navbar
+       ========================================================================== -->
+  <header>
+    <nav class="navbar" id="mainNavbar">
+      <div class="navbar-container">
+        <!-- Brand Logo -->
+        <div class="navbar-brand">
+          <a href="dashboard.html" class="navbar-logo" id="brandLogo">MUNify</a>
+        </div>
+
+        <!-- Mobile Navigation Toggle -->
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          ☰
+        </button>
+
+        <!-- Center Navigation Links -->
+        <ul class="navbar-nav" id="navbarLinks">
+          <li><a href="dashboard.html" class="nav-link" id="navOverview">Overview</a></li>
+          <li><a href="about.html" class="nav-link" id="navAbout">About</a></li>
+          <li><a href="contact.html" class="nav-link" id="navContact">Contact Us</a></li>
+        </ul>
+
+        <!-- Right Action Buttons -->
+        <div class="navbar-actions" id="navbarActions">
+          <a href="#profile" class="nav-profile-link" id="navProfile">
+            <span class="profile-icon">👤</span> Profile
+          </a>
+          <button type="button" class="btn-logout" id="btnLogout">Logout</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==========================================================================
+       Delegate Dashboard Main Content
+       ========================================================================== -->
+  <main class="delegate-dashboard-main" id="delegateDashboardContent">
+    
+    <!-- Welcome Header Section -->
+    <div class="delegate-welcome-header" id="delegateWelcomeSection">
+      <h1 class="welcome-heading" id="welcomeTitle">Welcome, <span id="delegateName">Anuraj Deshmukh</span>!</h1>
+      <p class="welcome-subtitle" id="welcomeSubtitle">Manage your conferences and sign ups here.</p>
+    </div>
+
+    <!-- My MUNs Section -->
+    <section class="delegate-section" id="myMunsSection">
+      <div class="section-title-wrap">
+        <h2 class="delegate-section-title" id="myMunsHeading">My MUNs</h2>
+        <div class="section-title-underline"></div>
+      </div>
+
+      <!-- Registered MUN Cards Grid (Dynamically Populated) -->
+      <div class="delegate-cards-grid" id="myMunsGrid">
+        <!-- Injected via JavaScript -->
+      </div>
+    </section>
+
+    <!-- Available MUNs Section -->
+    <section class="delegate-section" id="availableMunsSection">
+      <div class="section-title-wrap">
+        <h2 class="delegate-section-title" id="availableMunsHeading">Available MUNs</h2>
+        <div class="section-title-underline"></div>
+      </div>
+
+      <!-- Available MUN Cards Grid (Dynamically Populated) -->
+      <div class="delegate-cards-grid" id="availableMunsGrid">
+        <!-- Injected via JavaScript -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       Modals: Profile, Details, Register, Notice
+       ========================================================================== -->
+  <!-- Profile Modal -->
+  <div class="modal-overlay" id="profileModal" aria-hidden="true">
+    <div class="modal-content" id="profileModalContent">
+      <div class="modal-header">
+        <h3 class="modal-title">Delegate Profile</h3>
+        <button type="button" class="modal-close-btn" id="closeProfileModal" aria-label="Close Profile Modal">&times;</button>
+      </div>
+      <div class="modal-body" id="profileModalBody">
+        <div class="modal-body-detail"><strong>Name:</strong> <span id="modalProfileName">Anuraj Deshmukh</span></div>
+        <div class="modal-body-detail"><strong>Email:</strong> <span id="modalProfileEmail">anurajdeshmukh360@gmail.com</span></div>
+        <div class="modal-body-detail"><strong>Role:</strong> <span>Delegate</span></div>
+        <div class="modal-body-detail"><strong>Registered MUNs:</strong> <span id="modalProfileCount">1</span></div>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn-primary-navy" id="btnDoneProfileModal">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Details Modal -->
+  <div class="modal-overlay" id="detailsModal" aria-hidden="true">
+    <div class="modal-content" id="detailsModalContent">
+      <div class="modal-header">
+        <h3 class="modal-title" id="detailsModalTitle">Conference Details</h3>
+        <button type="button" class="modal-close-btn" id="closeDetailsModal" aria-label="Close Details Modal">&times;</button>
+      </div>
+      <div class="modal-body" id="detailsModalBody">
+        <!-- Injected dynamically -->
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn-primary-navy" id="btnCloseDetailsModalAction">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Registration Modal -->
+  <div class="modal-overlay" id="registerModal" aria-hidden="true">
+    <div class="modal-content" id="registerModalContent">
+      <div class="modal-header">
+        <h3 class="modal-title" id="registerModalTitle">Register for MUN</h3>
+        <button type="button" class="modal-close-btn" id="closeRegisterModal" aria-label="Close Register Modal">&times;</button>
+      </div>
+      <div class="modal-body" id="registerModalBody">
+        <p style="margin-bottom: 16px;">Confirm your registration details for <strong id="registerMunName">MUN</strong>.</p>
+        <div class="modal-body-detail"><strong>Delegate:</strong> <span id="regModalDelegateName">Anuraj Deshmukh</span></div>
+        <div class="modal-body-detail"><strong>Email:</strong> <span id="regModalDelegateEmail">anurajdeshmukh360@gmail.com</span></div>
+        <div class="modal-body-detail" style="margin-top: 14px;">
+          <label for="regCommitteeSelect" style="display:block; font-weight: 700; color: #002b49; margin-bottom: 6px;">Preferred Committee:</label>
+          <select id="regCommitteeSelect" style="width: 100%; padding: 10px; border: 1.5px solid #d1d5db; border-radius: 6px; font-size: 14px; font-family: inherit;">
+            <option value="UNHRC">UNHRC - Human Rights Council</option>
+            <option value="UNSC">UNSC - Security Council</option>
+            <option value="WHO">WHO - World Health Organization</option>
+            <option value="UNEP">UNEP - Environment Programme</option>
+            <option value="UNGA">UNGA - General Assembly</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn-secondary-cancel" id="btnCancelRegister">Cancel</button>
+        <button type="button" class="btn-primary-navy" id="btnConfirmRegister">Confirm Registration</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notice Modal (for Unregister alert) -->
+  <div class="modal-overlay" id="noticeModal" aria-hidden="true">
+    <div class="modal-content" id="noticeModalContent">
+      <div class="modal-header">
+        <h3 class="modal-title" id="noticeModalTitle">Registration Notice</h3>
+        <button type="button" class="modal-close-btn" id="closeNoticeModal" aria-label="Close Notice Modal">&times;</button>
+      </div>
+      <div class="modal-body" id="noticeModalBody">
+        <p id="noticeModalMessage">You cannot unregister after country assignment. Contact the organizer if you need to withdraw.</p>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn-primary-navy" id="btnAckNotice">Understood</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../../js/user-dashboard.js"></script>
+</body>
+</html>

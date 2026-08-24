@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MUNify - Delegate Registration</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/user-dashboard.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Header & Navbar
+       ========================================================================== -->
+  <header>
+    <nav class="navbar" id="mainNavbar">
+      <div class="navbar-container">
+        <!-- Brand Logo -->
+        <div class="navbar-brand">
+          <a href="dashboard.html" class="navbar-logo" id="brandLogo">MUNify</a>
+        </div>
+
+        <!-- Mobile Navigation Toggle -->
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          ☰
+        </button>
+
+        <!-- Center Navigation Links -->
+        <ul class="navbar-nav" id="navbarLinks">
+          <li><a href="dashboard.html" class="nav-link" id="navOverview">Overview</a></li>
+          <li><a href="about.html" class="nav-link" id="navAbout">About</a></li>
+          <li><a href="contact.html" class="nav-link" id="navContact">Contact Us</a></li>
+        </ul>
+
+        <!-- Right Action Buttons -->
+        <div class="navbar-actions" id="navbarActions">
+          <a href="#profile" class="nav-profile-link" id="navProfile">
+            <span class="profile-icon">👤</span> Profile
+          </a>
+          <button type="button" class="btn-logout" id="btnLogout">Logout</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==========================================================================
+       Main Registration Form Area
+       ========================================================================== -->
+  <main class="delegate-registration-main" id="delegateRegistrationMain">
+    <div class="registration-container" id="registrationContainer">
+      
+      <!-- Top Alert Notification Area -->
+      <div class="reg-alert" id="regAlert" role="alert"></div>
+
+      <!-- Registration Form -->
+      <form id="delegateRegForm" class="registration-form" novalidate>
+        
+        <!-- ==========================================
+             1. Personal Information
+             ========================================== -->
+        <section class="reg-section" id="sectionPersonal">
+          <h2 class="reg-section-heading">1. Personal Information</h2>
+          <hr class="reg-section-divider">
+
+          <div class="reg-5col-row" id="personalInfoGrid">
+            <!-- Full Name -->
+            <div class="reg-form-group">
+              <label for="fullName" class="reg-label">Full Name <span class="required-star">*</span></label>
+              <input 
+                type="text" 
+                id="fullName" 
+                name="fullName" 
+                class="reg-control" 
+                placeholder="xyz" 
+                required
+              >
+            </div>
+
+            <!-- Date of Birth -->
+            <div class="reg-form-group">
+              <label for="dob" class="reg-label">Date of Birth <span class="required-star">*</span></label>
+              <input 
+                type="date" 
+                id="dob" 
+                name="dob" 
+                class="reg-control" 
+                placeholder="dd-mm-yyyy" 
+                required
+              >
+            </div>
+
+            <!-- Gender -->
+            <div class="reg-form-group">
+              <label for="gender" class="reg-label">Gender <span class="required-star">*</span></label>
+              <select id="gender" name="gender" class="reg-control" required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+                <option value="Prefer not to say">Prefer not to say</option>
+              </select>
+            </div>
+
+            <!-- Email Address -->
+            <div class="reg-form-group">
+              <label for="email" class="reg-label">Email Address <span class="required-star">*</span></label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                class="reg-control" 
+                placeholder="xyz@gmail.com" 
+                required
+              >
+            </div>
+
+            <!-- Phone Number -->
+            <div class="reg-form-group">
+              <label for="phone" class="reg-label">Phone Number <span class="required-star">*</span></label>
+              <input 
+                type="tel" 
+                id="phone" 
+                name="phone" 
+                class="reg-control" 
+                placeholder="" 
+                required
+              >
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================
+             2. Academic Information
+             ========================================== -->
+        <section class="reg-section" id="sectionAcademic">
+          <h2 class="reg-section-heading">2. Academic Information</h2>
+          <hr class="reg-section-divider">
+
+          <div class="reg-1col-row">
+            <div class="reg-form-group">
+              <label for="schoolCollege" class="reg-label">School / College Name <span class="required-star">*</span></label>
+              <input 
+                type="text" 
+                id="schoolCollege" 
+                name="schoolCollege" 
+                class="reg-control" 
+                placeholder="" 
+                required
+              >
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================
+             3. Past MUN Experience
+             ========================================== -->
+        <section class="reg-section" id="sectionExperience">
+          <h2 class="reg-section-heading">3. Past MUN Experience</h2>
+          <hr class="reg-section-divider">
+
+          <div class="reg-1col-row">
+            <div class="reg-form-group">
+              <label for="pastMunsCount" class="reg-label">Number of MUNs Participated <span class="required-star">*</span></label>
+              <input 
+                type="number" 
+                id="pastMunsCount" 
+                name="pastMunsCount" 
+                class="reg-control" 
+                min="0" 
+                placeholder="" 
+                required
+              >
+            </div>
+          </div>
+        </section>
+
+        <!-- Submit Registration Button -->
+        <button type="submit" class="btn-submit-registration" id="btnSubmitRegistration">
+          Submit Registration
+        </button>
+      </form>
+
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       Profile Modal
+       ========================================================================== -->
+  <div class="modal-overlay" id="profileModal" aria-hidden="true">
+    <div class="modal-content" id="profileModalContent">
+      <div class="modal-header">
+        <h3 class="modal-title">Delegate Profile</h3>
+        <button type="button" class="modal-close-btn" id="closeProfileModal" aria-label="Close Profile Modal">&times;</button>
+      </div>
+      <div class="modal-body" id="profileModalBody">
+        <div class="modal-body-detail"><strong>Name:</strong> <span id="modalProfileName">Anuraj Deshmukh</span></div>
+        <div class="modal-body-detail"><strong>Email:</strong> <span id="modalProfileEmail">anurajdeshmukh360@gmail.com</span></div>
+        <div class="modal-body-detail"><strong>Role:</strong> <span>Delegate</span></div>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn-primary-navy" id="btnDoneProfileModal">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="../../js/user-register.js"></script>
+</body>
+</html>

@@ -1,0 +1,1368 @@
+/* ==========================================================================
+   MUNify - User Dashboard Specific Styles (Delegate Dashboard & Landing)
+   ========================================================================== */
+
+/* ==========================================================================
+   Delegate Dashboard Layout & Navbar Enhancements
+   ========================================================================== */
+.delegate-dashboard-main {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 44px 56px 80px 56px;
+  background-color: #ffffff;
+  min-height: calc(100vh - 72px - 90px);
+}
+
+.nav-profile-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+  text-decoration: none;
+}
+
+.nav-profile-link:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  opacity: 1;
+}
+
+.profile-icon {
+  font-size: 17px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-logout {
+  background-color: #dc2626;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 8px 22px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  line-height: 1.2;
+}
+
+.btn-logout:hover {
+  background-color: #b91c1c;
+}
+
+.btn-logout:active {
+  transform: translateY(1px);
+}
+
+/* ==========================================================================
+   Delegate Welcome Section
+   ========================================================================== */
+.delegate-welcome-header {
+  margin-bottom: 44px;
+}
+
+.welcome-heading {
+  color: #002b49;
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.welcome-subtitle {
+  color: #4b5563;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ==========================================================================
+   Delegate Section & Titles
+   ========================================================================== */
+.delegate-section {
+  margin-bottom: 56px;
+}
+
+.section-title-wrap {
+  margin-bottom: 26px;
+  display: inline-block;
+}
+
+.delegate-section-title {
+  color: #002b49;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+.section-title-underline {
+  height: 3.5px;
+  background-color: #002b49;
+  width: 100%;
+  margin-top: 5px;
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   Cards Grid
+   ========================================================================== */
+.delegate-cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: stretch;
+}
+
+.delegate-card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  border-left: 6px solid #002b49;
+  box-shadow: 0 4px 20px rgba(0, 43, 73, 0.08);
+  padding: 24px 24px 26px 24px;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  max-width: 100%;
+  position: relative;
+  border-top: 1px solid rgba(0, 43, 73, 0.04);
+  border-right: 1px solid rgba(0, 43, 73, 0.04);
+  border-bottom: 1px solid rgba(0, 43, 73, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.delegate-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 43, 73, 0.12);
+}
+
+/* ==========================================================================
+   Registered MUN Card Specifics
+   ========================================================================== */
+.status-pill {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.status-assigned {
+  background-color: #d1fae5;
+  color: #15803d;
+}
+
+.status-pending {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+.pill-check {
+  font-weight: 900;
+  font-size: 13px;
+}
+
+.card-mun-title {
+  color: #002b49;
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  line-height: 1.25;
+}
+
+.card-mun-subtitle {
+  color: #6b7280;
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 18px;
+  min-height: 22px;
+  line-height: 1.4;
+}
+
+.card-meta-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 18px;
+}
+
+.card-meta-item {
+  font-size: 14.5px;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.card-meta-item .meta-label {
+  font-weight: 700;
+  color: #374151;
+}
+
+.card-meta-item .meta-val {
+  font-weight: 400;
+  color: #4b5563;
+}
+
+/* Green Country Assigned Box */
+.country-assigned-box {
+  background-color: #d1fae5;
+  border-radius: 8px;
+  padding: 13px 15px;
+  margin-bottom: 22px;
+}
+
+.assigned-title {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #166534;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.assigned-note {
+  font-size: 12px;
+  color: #15803d;
+  line-height: 1.45;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Actions Row in Registered Card */
+.card-actions-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: auto;
+}
+
+.btn-card-details,
+.btn-card-enter-mun {
+  background-color: #002b49;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 10px 24px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-card-details:hover,
+.btn-card-enter-mun:hover {
+  background-color: #001e33;
+}
+
+.btn-card-details:active,
+.btn-card-enter-mun:active {
+  transform: translateY(1px);
+}
+
+/* ==========================================================================
+   Available MUN Card Specifics & Poster
+   ========================================================================== */
+.mun-poster-wrapper {
+  width: 100%;
+  height: 175px;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.mun-poster-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #f8fafc;
+  display: block;
+}
+
+.poster-placeholder-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  background: #f3f4f6;
+  color: #6b7280;
+  user-select: none;
+}
+
+.placeholder-icon-circle {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coming-soon-text {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #6b7280;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.btn-register-now {
+  width: 100%;
+  background-color: #002b49;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 12px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  text-align: center;
+  margin-top: auto;
+  line-height: 1.2;
+}
+
+.btn-register-now:hover {
+  background-color: #001e33;
+}
+
+.btn-register-now:active {
+  transform: translateY(1px);
+}
+
+.btn-already-registered {
+  width: 100%;
+  background-color: #60a5fa;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 12px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: default;
+  text-align: center;
+  margin-top: auto;
+  opacity: 0.95;
+  line-height: 1.2;
+}
+
+/* Empty State Message */
+.empty-state-text {
+  color: #6b7280;
+  font-size: 16px;
+  font-style: italic;
+  padding: 16px 0;
+}
+
+/* ==========================================================================
+   Modals (Profile, Conference Details, Registration)
+   ========================================================================== */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 43, 73, 0.6);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-content {
+  background: #ffffff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 540px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0, 43, 73, 0.2);
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.modal-title {
+  color: #002b49;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.modal-close-btn {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #6b7280;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modal-close-btn:hover {
+  color: #111827;
+}
+
+.modal-body {
+  color: #374151;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.modal-body-detail {
+  margin-bottom: 14px;
+}
+
+.modal-body-detail strong {
+  color: #002b49;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.btn-primary-navy {
+  background: #002b49;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary-navy:hover {
+  background: #001e33;
+}
+
+.btn-secondary-cancel {
+  background: #ffffff;
+  color: #4b5563;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: 1.5px solid #d1d5db;
+  cursor: pointer;
+}
+
+.btn-secondary-cancel:hover {
+  background: #f9fafb;
+}
+
+/* ==========================================================================
+   Hero & Landing Page Styles (Kept for public index)
+   ========================================================================== */
+.hero {
+  position: relative;
+  background-image: 
+    linear-gradient(rgba(0, 43, 73, 0.78), rgba(0, 43, 73, 0.78)),
+    url('../../assets/images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px 88px 20px;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.hero-content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 50px;
+  font-weight: 800;
+  color: var(--color-white);
+  line-height: 1.2;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.hero-description {
+  font-size: 19px;
+  color: var(--color-white);
+  line-height: 1.55;
+  font-weight: 400;
+  max-width: 820px;
+  margin: 0 auto 36px auto;
+  opacity: 0.98;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero-actions .btn-yellow {
+  padding: 14px 38px;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+.hero-actions .btn-outline-white {
+  padding: 13px 32px;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+.platform-features {
+  background-color: var(--color-white);
+  padding: 72px 0 84px 0;
+}
+
+.section-heading {
+  font-size: 38px;
+  font-weight: 800;
+  color: var(--color-navy);
+  text-align: center;
+  margin-bottom: 52px;
+  letter-spacing: -0.5px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.feature-card {
+  background-color: var(--color-card-gray);
+  border-radius: 12px;
+  padding: 34px 22px 38px 22px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 43, 73, 0.06);
+}
+
+.feature-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: 14px;
+  line-height: 1.3;
+}
+
+.feature-description {
+  font-size: 14.5px;
+  color: var(--color-text-body);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.featured-committees {
+  background-color: var(--color-bg-light);
+  padding: 72px 0 92px 0;
+}
+
+.committees-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.committee-card {
+  background-color: var(--color-white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 43, 73, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.committee-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 43, 73, 0.09);
+}
+
+.committee-image-wrapper {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background-color: #e2e8f0;
+}
+
+.committee-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.committee-body {
+  padding: 26px 28px 30px 28px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.committee-title {
+  font-size: 23px;
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: 12px;
+}
+
+.committee-description {
+  font-size: 15px;
+  color: var(--color-text-body);
+  line-height: 1.6;
+  margin-bottom: 26px;
+  flex-grow: 1;
+}
+
+.committee-link {
+  color: var(--color-navy);
+  font-size: 15px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.2s ease, opacity 0.2s ease;
+}
+
+.committee-link:hover {
+  gap: 10px;
+  opacity: 0.85;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+@media (max-width: 1100px) {
+  .delegate-dashboard-main {
+    padding: 36px 32px 64px 32px;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .committees-grid {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 860px) {
+  .delegate-dashboard-main {
+    padding: 28px 20px 56px 20px;
+  }
+
+  .welcome-heading {
+    font-size: 30px;
+  }
+
+  .delegate-section-title {
+    font-size: 28px;
+  }
+
+  .hero-title {
+    font-size: 38px;
+  }
+
+  .hero-description {
+    font-size: 17px;
+    margin-bottom: 28px;
+  }
+
+  .committees-grid {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .section-heading {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .delegate-card {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   Delegate Individual MUN Dashboard Styles (Matching Reference Screenshots)
+   ========================================================================== */
+.mun-dashboard-body {
+  background-color: #f8fafc;
+}
+
+.mun-dashboard-main {
+  min-height: calc(100vh - 72px);
+  padding: 36px 0 80px 0;
+  background-color: #f8fafc;
+}
+
+.mun-dashboard-container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 36px;
+  box-sizing: border-box;
+}
+
+/* 1. Top MUN Header Card */
+.mun-header-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 24px 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  border: 1px solid #eef2f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.mun-header-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #002b49;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.2px;
+}
+
+.mun-back-link {
+  font-size: 15px;
+  font-weight: 600;
+  color: #002b49;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+}
+
+.mun-back-link:hover {
+  color: #001729;
+  text-decoration: underline;
+}
+
+/* Base Card Style for MUN Dashboard */
+.mun-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 28px 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  border: 1px solid #eef2f6;
+  margin-bottom: 24px;
+}
+
+.mun-card-heading {
+  font-size: 19px;
+  font-weight: 700;
+  color: #002b49;
+  margin: 0 0 22px 0;
+  letter-spacing: -0.2px;
+}
+
+/* 2. Conference Information Grid */
+.conf-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 64px;
+  row-gap: 20px;
+}
+
+.conf-info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.conf-info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.conf-info-label {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 3px;
+  font-weight: 400;
+}
+
+.conf-info-value {
+  font-size: 16px;
+  color: #002b49;
+  font-weight: 400;
+}
+
+.conf-info-value.font-bold {
+  font-weight: 700;
+  color: #002b49;
+}
+
+/* 3. Registration Progress Tracker */
+.progress-tracker-wrapper {
+  position: relative;
+  padding: 16px 20px 24px 20px;
+  margin-top: 10px;
+}
+
+.progress-track-line {
+  position: absolute;
+  top: 34px;
+  left: 6%;
+  right: 6%;
+  height: 2px;
+  background-color: #d1d5db;
+  z-index: 1;
+}
+
+.progress-steps-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.progress-step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 120px;
+}
+
+.step-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  transition: all 0.2s ease;
+}
+
+.step-circle-success {
+  background-color: #16a34a;
+  color: #ffffff;
+}
+
+.step-circle-pending {
+  background-color: #d1d5db;
+  color: #ffffff;
+}
+
+.step-icon {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.step-number {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.step-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  white-space: nowrap;
+}
+
+/* 4 & 5. Bottom Two-Column Row */
+.mun-bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.status-items-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.status-entry {
+  display: flex;
+  flex-direction: column;
+}
+
+.status-label {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 3px;
+  font-weight: 400;
+}
+
+.status-value {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.status-val-navy {
+  color: #002b49;
+}
+
+.status-val-orange {
+  color: #ea580c;
+}
+
+.status-val-red {
+  color: #dc2626;
+}
+
+.status-val-green {
+  color: #16a34a;
+}
+
+/* Quick Actions 2x2 Grid */
+.quick-actions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.btn-quick-action {
+  height: 52px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0 16px;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: inherit;
+}
+
+.btn-qa-primary {
+  background-color: #002b49;
+  color: #ffffff;
+  border: none;
+}
+
+.btn-qa-primary:hover {
+  background-color: #001e33;
+}
+
+.btn-qa-disabled {
+  background-color: #e5e7eb;
+  color: #9ca3af;
+  border: none;
+  cursor: not-allowed;
+}
+
+.btn-qa-outline {
+  background-color: #ffffff;
+  color: #002b49;
+  border: 1.5px solid #002b49;
+}
+
+.btn-qa-outline:hover {
+  background-color: #f8fafc;
+}
+
+/* Quick Action Modals & Inner Controls */
+.committee-options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.committee-radio-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.committee-radio-card:hover {
+  border-color: #002b49;
+  background-color: #f8fafc;
+}
+
+.committee-card-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.committee-card-text strong {
+  font-size: 15px;
+  color: #002b49;
+}
+
+.committee-card-text span {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.resource-links-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.resource-link-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+}
+
+.res-icon {
+  font-size: 22px;
+}
+
+.res-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.res-info strong {
+  font-size: 14px;
+  color: #002b49;
+}
+
+.res-info span {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.btn-res-download {
+  background-color: #002b49;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.btn-res-download:hover {
+  background-color: #001e33;
+}
+
+.btn-modal-cancel {
+  background: none;
+  border: 1px solid #d1d5db;
+  color: #4b5563;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-modal-cancel:hover {
+  background-color: #f3f4f6;
+}
+
+/* Responsive Breakpoints for MUN Dashboard */
+@media (max-width: 992px) {
+  .mun-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+  .conf-info-grid {
+    column-gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mun-dashboard-container {
+    padding: 0 20px;
+  }
+  .mun-header-card, .mun-card {
+    padding: 20px 24px;
+  }
+  .conf-info-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .progress-step-item {
+    width: auto;
+  }
+  .step-label {
+    font-size: 11px;
+  }
+  .quick-actions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .mun-header-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .progress-track-line {
+    top: 28px;
+  }
+  .step-circle {
+    width: 28px;
+    height: 28px;
+  }
+  .step-icon, .step-number {
+    font-size: 12px;
+  }
+  .step-label {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Delegate Registration Form Page Styles (Matching Screenshot)
+   ========================================================================== */
+.delegate-registration-main {
+  background-color: #ffffff;
+  min-height: calc(100vh - 72px);
+  padding: 40px 0 80px 0;
+}
+
+.registration-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.registration-form {
+  width: 100%;
+}
+
+.reg-section {
+  margin-bottom: 36px;
+}
+
+.reg-section-heading {
+  font-size: 19px;
+  font-weight: 700;
+  color: #002b49;
+  margin-bottom: 10px;
+  letter-spacing: -0.2px;
+}
+
+.reg-section-divider {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin-bottom: 22px;
+}
+
+.reg-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.reg-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.reg-control {
+  width: 100%;
+  height: 44px;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #111827;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.reg-control:focus {
+  outline: none;
+  border-color: #002b49;
+  box-shadow: 0 0 0 2px rgba(0, 43, 73, 0.12);
+}
+
+.reg-control::placeholder {
+  color: #9ca3af;
+}
+
+.reg-control.is-invalid {
+  border-color: #ef4444;
+  background-color: #fef2f2;
+}
+
+.reg-control.is-invalid:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
+}
+
+/* 5-Column Row for Personal Information on Desktop */
+.reg-5col-row {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+}
+
+/* Full Width Rows for Academic & Experience Information */
+.reg-1col-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+}
+
+/* Submit Button */
+.btn-submit-registration {
+  width: 100%;
+  background-color: #002b49;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  height: 52px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  margin-top: 48px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.2px;
+}
+
+.btn-submit-registration:hover {
+  background-color: #001e33;
+}
+
+.btn-submit-registration:active {
+  background-color: #001322;
+  transform: translateY(1px);
+}
+
+/* Error message notification */
+.reg-alert {
+  padding: 12px 18px;
+  border-radius: 6px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  display: none;
+}
+
+.reg-alert.alert-error {
+  background-color: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.reg-alert.alert-success {
+  background-color: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .reg-5col-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .registration-container {
+    padding: 0 24px;
+  }
+  .reg-5col-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .registration-container {
+    padding: 0 16px;
+  }
+  .reg-5col-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+

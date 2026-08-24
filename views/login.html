@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - MUNify</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Header & Navbar
+       ========================================================================== -->
+  <header>
+    <nav class="navbar" id="mainNavbar">
+      <div class="navbar-container">
+        <!-- Brand Logo -->
+        <div class="navbar-brand">
+          <a href="user/index.html" class="navbar-logo" id="brandLogo">MUNify</a>
+        </div>
+
+        <!-- Mobile Navigation Toggle -->
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          ☰
+        </button>
+
+        <!-- Center Navigation Links -->
+        <ul class="navbar-nav" id="navbarLinks">
+          <li><a href="user/index.html" class="nav-link" id="navOverview">Overview</a></li>
+          <li><a href="user/about.html" class="nav-link" id="navAbout">About</a></li>
+          <li><a href="user/contact.html" class="nav-link" id="navContact">Contact Us</a></li>
+        </ul>
+
+        <!-- Right Action Buttons -->
+        <div class="navbar-actions">
+          <a href="user/login.html" class="btn-yellow" id="btnLogin">Login</a>
+          <a href="user/signup.html" class="btn-yellow" id="btnSignup">Signup</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==========================================================================
+       Main Content: Login Card
+       ========================================================================== -->
+  <main class="login-page">
+    <div class="login-card" id="loginCard">
+      <h1 class="login-card-title" id="loginHeading">Login to MUNify</h1>
+
+      <form class="login-form" id="loginForm" novalidate>
+        <!-- Email Field -->
+        <div class="form-group">
+          <label for="loginEmail" class="form-label">Email</label>
+          <input 
+            type="email" 
+            id="loginEmail" 
+            name="email" 
+            class="form-input" 
+            placeholder="Enter your email" 
+            required
+            autocomplete="email"
+          >
+        </div>
+
+        <!-- Password Field -->
+        <div class="form-group">
+          <label for="loginPassword" class="form-label">Password</label>
+          <input 
+            type="password" 
+            id="loginPassword" 
+            name="password" 
+            class="form-input" 
+            placeholder="Enter your password" 
+            required
+            autocomplete="current-password"
+          >
+        </div>
+
+        <!-- Status Message Container -->
+        <div class="form-status-message" id="formStatusMessage" role="alert"></div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn-login-submit" id="btnSubmitLogin">
+          Login
+        </button>
+
+        <!-- Sign Up Link -->
+        <p class="signup-prompt" id="signupPrompt">
+          Don't have an account? <a href="user/signup.html" class="signup-link" id="linkSignUp">Sign Up</a>
+        </p>
+      </form>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="../js/login.js"></script>
+</body>
+</html>

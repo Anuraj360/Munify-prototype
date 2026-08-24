@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - MUNify</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/admin.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Header & Navigation Bar
+       ========================================================================== -->
+  <header>
+    <nav class="navbar" id="mainNavbar">
+      <div class="navbar-container">
+        <!-- Brand Logo -->
+        <div class="navbar-brand">
+          <a href="../user/index.html" class="navbar-logo" id="brandLogo">MUNify</a>
+        </div>
+
+        <!-- Mobile Navigation Toggle -->
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          ☰
+        </button>
+
+        <!-- Center Navigation Links -->
+        <ul class="navbar-nav" id="navbarLinks">
+          <li><a href="../user/index.html" class="nav-link" id="navOverview">Overview</a></li>
+          <li><a href="../user/about.html" class="nav-link" id="navAbout">About</a></li>
+          <li><a href="../user/contact.html" class="nav-link" id="navContact">Contact Us</a></li>
+        </ul>
+
+        <!-- Right Action Controls (Profile & Logout) -->
+        <div class="navbar-actions">
+          <a href="#" class="admin-nav-profile" id="adminProfileLink" aria-label="Admin Profile">
+            <svg class="admin-profile-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2ZM12 5C13.657 5 15 6.343 15 8C15 9.657 13.657 11 12 11C10.343 11 9 9.657 9 8C9 6.343 10.343 5 12 5ZM6.883 17.132C7.818 15.228 9.76 14 12 14C14.24 14 16.182 15.228 17.117 17.132C15.773 18.298 13.973 19 12 19C10.027 19 8.227 18.298 6.883 17.132Z" />
+            </svg>
+            <span>Profile</span>
+          </a>
+          <a href="../user/login.html" class="btn-admin-logout" id="adminLogoutBtn">Logout</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==========================================================================
+       Main Content: Admin Dashboard
+       ========================================================================== -->
+  <main class="admin-dashboard-page">
+    <div class="admin-main-container">
+      
+      <!-- Top Title and Action Row -->
+      <div class="admin-header-row">
+        <h1 class="admin-page-title" id="adminDashboardHeading">Admin Dashboard</h1>
+        <a href="create-mun.html" class="btn-create-mun" id="btnCreateMun">Create MUN</a>
+      </div>
+
+      <!-- MUN Cards Container -->
+      <div class="mun-cards-grid" id="munCardsContainer">
+        
+        <!-- Walchand MUN Card -->
+        <div class="mun-card" id="munCardWalchand">
+          <h2 class="mun-card-title" id="munTitleWalchand">Walchand MUN</h2>
+          <p class="mun-card-desc" id="munDescWalchand">xyz</p>
+          <a href="mun-dashboard.html?munId=mun_walchand_1" class="btn-open-dashboard" id="btnOpenDashboardWalchand">Open Dashboard</a>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="../../js/admin/dashboard.js"></script>
+</body>
+</html>

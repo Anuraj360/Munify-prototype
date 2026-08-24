@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MUNify - Selected MUN Dashboard</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/user-dashboard.css">
+</head>
+<body class="mun-dashboard-body">
+
+  <!-- ==========================================================================
+       Header & Navbar
+       ========================================================================== -->
+  <header>
+    <nav class="navbar" id="mainNavbar">
+      <div class="navbar-container">
+        <!-- Brand Logo -->
+        <div class="navbar-brand">
+          <a href="dashboard.html" class="navbar-logo" id="brandLogo">MUNify</a>
+        </div>
+
+        <!-- Mobile Navigation Toggle -->
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          ☰
+        </button>
+
+        <!-- Center Navigation Links -->
+        <ul class="navbar-nav" id="navbarLinks">
+          <li><a href="dashboard.html" class="nav-link" id="navOverview">Overview</a></li>
+          <li><a href="about.html" class="nav-link" id="navAbout">About</a></li>
+          <li><a href="contact.html" class="nav-link" id="navContact">Contact Us</a></li>
+        </ul>
+
+        <!-- Right Action Buttons -->
+        <div class="navbar-actions" id="navbarActions">
+          <a href="#profile" class="nav-profile-link" id="navProfile">
+            <span class="profile-icon">👤</span> Profile
+          </a>
+          <button type="button" class="btn-logout" id="btnLogout">Logout</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==========================================================================
+       Main MUN-Specific Dashboard Area
+       ========================================================================== -->
+  <main class="mun-dashboard-main" id="munDashboardMain">
+    <div class="mun-dashboard-container" id="munDashboardContainer">
+
+      <!-- ==========================================
+           1. Top MUN Header Card
+           ========================================== -->
+      <section class="mun-header-card" id="munHeaderCard">
+        <h1 class="mun-header-title" id="munHeaderTitle">Walchand MUN</h1>
+        <a href="dashboard.html" class="mun-back-link" id="munBackLink">
+          <span class="back-arrow">←</span> Back to Dashboard
+        </a>
+      </section>
+
+      <!-- ==========================================
+           2. Conference Information Card
+           ========================================== -->
+      <section class="mun-card" id="conferenceInfoCard">
+        <h2 class="mun-card-heading">Conference Information</h2>
+        
+        <div class="conf-info-grid" id="confInfoGrid">
+          <!-- Left Column -->
+          <div class="conf-info-col">
+            <div class="conf-info-item">
+              <span class="conf-info-label">Description</span>
+              <span class="conf-info-value" id="confDescription">xyz</span>
+            </div>
+            <div class="conf-info-item">
+              <span class="conf-info-label">Conference Date</span>
+              <span class="conf-info-value font-bold" id="confDate">August 31, 2026</span>
+            </div>
+            <div class="conf-info-item">
+              <span class="conf-info-label">Total Registered Delegates</span>
+              <span class="conf-info-value font-bold" id="confDelegatesCount">1</span>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="conf-info-col">
+            <div class="conf-info-item">
+              <span class="conf-info-label">Location</span>
+              <span class="conf-info-value font-bold" id="confLocation">Sangli</span>
+            </div>
+            <div class="conf-info-item">
+              <span class="conf-info-label">Registration Deadline</span>
+              <span class="conf-info-value font-bold" id="confDeadline">August 24, 2026</span>
+            </div>
+            <div class="conf-info-item">
+              <span class="conf-info-label">Total Committees</span>
+              <span class="conf-info-value font-bold" id="confCommitteesCount">1</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           3. Registration Progress Card
+           ========================================== -->
+      <section class="mun-card" id="registrationProgressCard">
+        <h2 class="mun-card-heading">Registration Progress</h2>
+        
+        <div class="progress-tracker-wrapper" id="progressTrackerWrapper">
+          <div class="progress-track-line" id="progressTrackLine"></div>
+          
+          <div class="progress-steps-container" id="progressStepsContainer">
+            <!-- Step 1: Join MUN (Completed) -->
+            <div class="progress-step-item step-completed" id="step1">
+              <div class="step-circle step-circle-success">
+                <span class="step-icon">✓</span>
+              </div>
+              <span class="step-label">Join MUN</span>
+            </div>
+
+            <!-- Step 2: Select Committee -->
+            <div class="progress-step-item" id="step2">
+              <div class="step-circle step-circle-pending">
+                <span class="step-number">2</span>
+              </div>
+              <span class="step-label">Select Committee</span>
+            </div>
+
+            <!-- Step 3: Request Country -->
+            <div class="progress-step-item" id="step3">
+              <div class="step-circle step-circle-pending">
+                <span class="step-number">3</span>
+              </div>
+              <span class="step-label">Request Country</span>
+            </div>
+
+            <!-- Step 4: Assigned -->
+            <div class="progress-step-item" id="step4">
+              <div class="step-circle step-circle-pending">
+                <span class="step-number">4</span>
+              </div>
+              <span class="step-label">Assigned</span>
+            </div>
+
+            <!-- Step 5: Enter Room -->
+            <div class="progress-step-item" id="step5">
+              <div class="step-circle step-circle-pending">
+                <span class="step-number">5</span>
+              </div>
+              <span class="step-label">Enter Room</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           4 & 5. Bottom Two-Column Grid: Current Status & Quick Actions
+           ========================================== -->
+      <div class="mun-bottom-grid" id="munBottomGrid">
+        
+        <!-- Left: Current Status Card -->
+        <section class="mun-card" id="currentStatusCard">
+          <h2 class="mun-card-heading">Current Status</h2>
+          
+          <div class="status-items-stack" id="statusItemsStack">
+            <div class="status-entry">
+              <span class="status-label">Conference</span>
+              <span class="status-value status-val-navy" id="statusConference">Walchand MUN</span>
+            </div>
+
+            <div class="status-entry">
+              <span class="status-label">Committee</span>
+              <span class="status-value status-val-orange" id="statusCommittee">Not Selected</span>
+            </div>
+
+            <div class="status-entry">
+              <span class="status-label">Country Preferences</span>
+              <span class="status-value status-val-orange" id="statusCountryPref">Not Submitted</span>
+            </div>
+
+            <div class="status-entry">
+              <span class="status-label">Country Assignment</span>
+              <span class="status-value status-val-orange" id="statusCountryAssign">Pending Assignment</span>
+            </div>
+
+            <div class="status-entry">
+              <span class="status-label">Position Paper</span>
+              <span class="status-value status-val-red" id="statusPositionPaper">Not Submitted</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Right: Quick Actions Card -->
+        <section class="mun-card" id="quickActionsCard">
+          <h2 class="mun-card-heading">Quick Actions</h2>
+          
+          <div class="quick-actions-grid" id="quickActionsGrid">
+            <!-- 1. Select Committee (Active Dark Navy) -->
+            <button type="button" class="btn-quick-action btn-qa-primary" id="btnSelectCommittee">
+              Select Committee
+            </button>
+
+            <!-- 2. Request Country (Initially Disabled Gray) -->
+            <button type="button" class="btn-quick-action btn-qa-disabled" id="btnRequestCountry" disabled>
+              Request Country
+            </button>
+
+            <!-- 3. View Resources (Outlined) -->
+            <button type="button" class="btn-quick-action btn-qa-outline" id="btnViewResources">
+              View Resources
+            </button>
+
+            <!-- 4. Enter Room (Locked Outlined) -->
+            <button type="button" class="btn-quick-action btn-qa-outline" id="btnEnterRoom">
+              Enter Room (Locked)
+            </button>
+          </div>
+        </section>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       Select Committee Modal
+       ========================================================================== -->
+  <div class="modal-overlay" id="selectCommitteeModal" aria-hidden="true">
+    <div class="modal-content" id="selectCommitteeModalContent">
+      <div class="modal-header">
+        <h3 class="modal-title">Select Committee</h3>
+        <button type="button" class="modal-close-btn" id="closeCommitteeModal" aria-label="Close Modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="margin-bottom: 16px; font-size: 14px; color: #4b5563;">
+          Choose your preferred committee for <strong id="modalMunNameText">this MUN</strong>:
+        </p>
+        <div class="committee-options-list">
+          <label class="committee-radio-card">
+            <input type="radio" name="committeeChoice" value="UNHRC" checked>
+            <div class="committee-card-text">
+              <strong>UNHRC</strong>
+              <span>United Nations Human Rights Council</span>
+            </div>
+          </label>
+          <label class="committee-radio-card">
+            <input type="radio" name="committeeChoice" value="UNSC">
+            <div class="committee-card-text">
+              <strong>UNSC</strong>
+              <span>United Nations Security Council</span>
+            </div>
+          </label>
+          <label class="committee-radio-card">
+            <input type="radio" name="committeeChoice" value="UNEP">
+            <div class="committee-card-text">
+              <strong>UNEP</strong>
+              <span>United Nations Environment Programme</span>
+            </div>
+          </label>
+          <label class="committee-radio-card">
+            <input type="radio" name="committeeChoice" value="DISEC">
+            <div class="committee-card-text">
+              <strong>DISEC</strong>
+              <span>Disarmament and International Security Committee</span>
+            </div>
+          </label>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn-modal-cancel" id="btnCancelCommitteeModal">Cancel</button>
+        <button type="button" class="btn-primary-navy" id="btnSaveCommitteeModal">Save Committee</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Request Country Modal
+       ========================================================================== -->
+  <div class="modal-overlay" id="requestCountryModal" aria-hidden="true">
+    <div class="modal-content" id="requestCountryModalContent">
+      <div class="modal-header">
+        <h3 class="modal-title">Request Country Preferences</h3>
+        <button type="button" class="modal-close-btn" id="closeCountryModal" aria-label="Close Modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="margin-bottom: 16px; font-size: 14px; color: #4b5563;">
+          Specify your top 3 country preferences for committee allocation:
+        </p>
+        <div class="reg-form-group" style="margin-bottom: 12px;">
+          <label class="reg-label">1st Preference Country</label>
+          <input type="text" class="reg-control" id="countryPref1" placeholder="e.g. Australia" value="Australia">
+        </div>
+        <div class="reg-form-group" style="margin-bottom: 12px;">
+          <label class="reg-label">2nd Preference Country</label>
+          <input type="text" class="reg-control" id="countryPref2" placeholder="e.g. France">
+        </div>
+        <div class="reg-form-group">
+          <label class="reg-label">3rd Preference Country</label>
+          <input type="text" class="reg-control" id="countryPref3" placeholder="e.g. Japan">
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn-modal-cancel" id="btnCancelCountryModal">Cancel</button>
+        <button type="button" class="btn-primary-navy" id="btnSaveCountryModal">Submit Preferences</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Resources Modal
+       ========================================================================== -->
+  <div class="modal-overlay" id="resourcesModal" aria-hidden="true">
+    <div class="modal-content" id="resourcesModalContent">
+      <div class="modal-header">
+        <h3 class="modal-title">Conference Resources</h3>
+        <button type="button" class="modal-close-btn" id="closeResourcesModal" aria-label="Close Modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="resource-links-stack">
+          <div class="resource-link-item">
+            <span class="res-icon">📘</span>
+            <div class="res-info">
+              <strong>Rules of Procedure (ROP)</strong>
+              <span>Official conference handbook and standard rules.</span>
+            </div>
+            <a href="#rop" class="btn-res-download" onclick="alert('Downloading Rules of Procedure handbook...'); return false;">Download</a>
+          </div>
+          <div class="resource-link-item">
+            <span class="res-icon">📑</span>
+            <div class="res-info">
+              <strong>Committee Background Guide</strong>
+              <span>Detailed agenda brief, historical context, and guiding questions.</span>
+            </div>
+            <a href="#guide" class="btn-res-download" onclick="alert('Downloading Background Guide...'); return false;">Download</a>
+          </div>
+          <div class="resource-link-item">
+            <span class="res-icon">📝</span>
+            <div class="res-info">
+              <strong>Position Paper Template & Guidelines</strong>
+              <span>Official submission format and citation guidelines.</span>
+            </div>
+            <a href="#template" class="btn-res-download" onclick="alert('Downloading Position Paper Template...'); return false;">Download</a>
+          </div>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn-primary-navy" id="btnCloseResourcesModal">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Room Locked Notice Modal
+       ========================================================================== -->
+  <div class="modal-overlay" id="lockedModal" aria-hidden="true">
+    <div class="modal-content" id="lockedModalContent">
+      <div class="modal-header">
+        <h3 class="modal-title">Room Locked</h3>
+        <button type="button" class="modal-close-btn" id="closeLockedModal" aria-label="Close Modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div style="text-align: center; padding: 12px 0;">
+          <div style="font-size: 38px; margin-bottom: 12px;">🔒</div>
+          <h4 style="font-size: 17px; font-weight: 700; color: #002b49; margin-bottom: 8px;">Conference Room Is Currently Locked</h4>
+          <p style="font-size: 14px; color: #4b5563; line-height: 1.5;">
+            The virtual committee room will automatically open on the conference date once country allocations and executive board checks are finalized.
+          </p>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn-primary-navy" id="btnCloseLockedModal">Understood</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Profile Modal
+       ========================================================================== -->
+  <div class="modal-overlay" id="profileModal" aria-hidden="true">
+    <div class="modal-content" id="profileModalContent">
+      <div class="modal-header">
+        <h3 class="modal-title">Delegate Profile</h3>
+        <button type="button" class="modal-close-btn" id="closeProfileModal" aria-label="Close Profile Modal">&times;</button>
+      </div>
+      <div class="modal-body" id="profileModalBody">
+        <div class="modal-body-detail"><strong>Name:</strong> <span id="modalProfileName">Anuraj Deshmukh</span></div>
+        <div class="modal-body-detail"><strong>Email:</strong> <span id="modalProfileEmail">anurajdeshmukh360@gmail.com</span></div>
+        <div class="modal-body-detail"><strong>Role:</strong> <span>Delegate</span></div>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn-primary-navy" id="btnDoneProfileModal">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="../../js/user-mun-dashboard.js"></script>
+</body>
+</html>

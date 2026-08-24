@@ -1,0 +1,194 @@
+/* ==========================================================================
+   MUNify - User Signup Page Specific Styles
+   ========================================================================== */
+
+.signup-page {
+  background-color: var(--color-white);
+  min-height: calc(100vh - 72px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px 60px 20px;
+}
+
+.signup-card {
+  background-color: var(--color-white);
+  width: 100%;
+  max-width: 480px;
+  border-radius: 20px;
+  box-shadow: 0 18px 45px rgba(0, 34, 60, 0.12), 0 4px 12px rgba(0, 0, 0, 0.04);
+  padding: 44px 38px 40px 38px;
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-card-title {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--color-navy);
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: -0.3px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.form-input,
+.form-select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+  color: var(--color-text-body);
+  background-color: var(--color-white);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input:focus,
+.form-select:focus {
+  border-color: var(--color-navy);
+  box-shadow: 0 0 0 3px rgba(0, 43, 73, 0.1);
+}
+
+.form-input::placeholder {
+  color: #9ca3af;
+  font-weight: 400;
+}
+
+.form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234b5563' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px;
+  padding-right: 38px;
+  cursor: pointer;
+}
+
+.form-select:invalid,
+.form-select option[value=""] {
+  color: #9ca3af;
+}
+
+.form-select option {
+  color: var(--color-text-body);
+}
+
+.btn-signup-submit {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 14px 20px;
+  border-radius: 8px;
+  width: 100%;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  cursor: pointer;
+}
+
+.btn-signup-submit:hover {
+  background-color: var(--color-navy-dark);
+}
+
+.btn-signup-submit:active {
+  transform: translateY(1px);
+}
+
+.login-prompt {
+  text-align: center;
+  font-size: 14.5px;
+  color: var(--color-text-muted);
+  margin-top: 24px;
+}
+
+.login-link {
+  color: #0066cc;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 3px;
+  transition: text-decoration 0.2s ease, color 0.2s ease;
+}
+
+.login-link:hover {
+  color: #004c99;
+  text-decoration: underline;
+}
+
+/* Inline Feedback & Validation Messages */
+.form-status-message {
+  padding: 11px 14px;
+  border-radius: 6px;
+  font-size: 13.5px;
+  font-weight: 600;
+  display: none;
+  margin-top: 4px;
+}
+
+.form-status-message.success {
+  display: block;
+  background-color: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.form-status-message.error {
+  display: block;
+  background-color: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+/* Responsiveness */
+@media (max-width: 540px) {
+  .signup-page {
+    padding: 24px 16px 40px 16px;
+    align-items: flex-start;
+  }
+
+  .signup-card {
+    padding: 32px 22px 30px 22px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 34, 60, 0.1);
+  }
+
+  .signup-card-title {
+    font-size: 26px;
+    margin-bottom: 24px;
+  }
+
+  .form-input,
+  .form-select {
+    padding: 11px 14px;
+    font-size: 14.5px;
+  }
+
+  .btn-signup-submit {
+    padding: 13px;
+    font-size: 15px;
+  }
+}

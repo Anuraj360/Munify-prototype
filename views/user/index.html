@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MUNify - Run Smarter, Fairer, Digital MUN Conferences</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/user-dashboard.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Header & Navbar
+       ========================================================================== -->
+  <header>
+    <nav class="navbar" id="mainNavbar">
+      <div class="navbar-container">
+        <!-- Brand Logo -->
+        <div class="navbar-brand">
+          <a href="index.html" class="navbar-logo" id="brandLogo">MUNify</a>
+        </div>
+
+        <!-- Mobile Navigation Toggle -->
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          ☰
+        </button>
+
+        <!-- Center Navigation Links -->
+        <ul class="navbar-nav" id="navbarLinks">
+          <li><a href="index.html" class="nav-link" id="navOverview">Overview</a></li>
+          <li><a href="about.html" class="nav-link" id="navAbout">About</a></li>
+          <li><a href="contact.html" class="nav-link" id="navContact">Contact Us</a></li>
+        </ul>
+
+        <!-- Right Action Buttons -->
+        <div class="navbar-actions">
+          <a href="login.html" class="btn-yellow" id="btnLogin">Login</a>
+          <a href="signup.html" class="btn-yellow" id="btnSignup">Signup</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         Hero Section
+         ========================================================================== -->
+    <section class="hero" id="heroSection">
+      <div class="hero-content">
+        <h1 class="hero-title" id="heroMainHeading">Run Smarter, Fairer, Digital MUN Conferences</h1>
+        <p class="hero-description" id="heroDescription">
+          A Complete Platform for Committees, Voting &amp; Scoring. Empowering the next generation of diplomats with cutting-edge technology.
+        </p>
+        <div class="hero-actions">
+          <a href="signup.html" class="btn-yellow" id="btnRegisterNow">Register Now</a>
+          <a href="../admin/login.html" class="btn-outline-white" id="btnContinueOrganiser">Continue As Organiser</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Platform Features Section
+         ========================================================================== -->
+    <section class="platform-features" id="overview">
+      <div class="container">
+        <h2 class="section-heading" id="featuresHeading">Platform Features</h2>
+        <div class="features-grid">
+          <!-- Feature Card 1 -->
+          <div class="feature-card" id="featureCardVoting">
+            <h3 class="feature-title">Real-Time Voting</h3>
+            <p class="feature-description">
+              Instant results for motions and resolutions with secure digital tallies.
+            </p>
+          </div>
+
+          <!-- Feature Card 2 -->
+          <div class="feature-card" id="featureCardMotions">
+            <h3 class="feature-title">Digital Motions</h3>
+            <p class="feature-description">
+              Submit and track motions directly from your device without raising placards.
+            </p>
+          </div>
+
+          <!-- Feature Card 3 -->
+          <div class="feature-card" id="featureCardScoring">
+            <h3 class="feature-title">Transparent Scoring</h3>
+            <p class="feature-description">
+              Automated scoring system based on participation and diplomatic performance.
+            </p>
+          </div>
+
+          <!-- Feature Card 4 -->
+          <div class="feature-card" id="featureCardCertificates">
+            <h3 class="feature-title">Secure Certificates</h3>
+            <p class="feature-description">
+              Instantly generated, verifiable digital certificates for all participants.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Featured Committees Section
+         ========================================================================== -->
+    <section class="featured-committees" id="about">
+      <div class="container">
+        <h2 class="section-heading" id="committeesHeading">Featured Committees</h2>
+        <div class="committees-grid">
+          <!-- Committee Card 1: Security Council -->
+          <div class="committee-card" id="committeeCardSecurityCouncil">
+            <div class="committee-image-wrapper">
+              <img 
+                src="../../assets/images/security-council.jpg" 
+                alt="Security Council" 
+                class="committee-image"
+                id="imgSecurityCouncil"
+                loading="lazy"
+              >
+            </div>
+            <div class="committee-body">
+              <h3 class="committee-title">Security Council</h3>
+              <p class="committee-description">
+                Maintaining international peace and security through collaborative diplomacy.
+              </p>
+              <a href="about.html" class="committee-link" id="linkSecurityCouncil">
+                View Details &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- Committee Card 2: UNEP -->
+          <div class="committee-card" id="committeeCardUNEP">
+            <div class="committee-image-wrapper">
+              <img 
+                src="../../assets/images/unep.jpg" 
+                alt="UNEP" 
+                class="committee-image"
+                id="imgUNEP"
+                loading="lazy"
+              >
+            </div>
+            <div class="committee-body">
+              <h3 class="committee-title">UNEP</h3>
+              <p class="committee-description">
+                Addressing global environmental challenges and promoting sustainable development.
+              </p>
+              <a href="about.html" class="committee-link" id="linkUNEP">
+                View Details &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- Committee Card 3: WHO -->
+          <div class="committee-card" id="committeeCardWHO">
+            <div class="committee-image-wrapper">
+              <img 
+                src="../../assets/images/who.jpg" 
+                alt="WHO" 
+                class="committee-image"
+                id="imgWHO"
+                loading="lazy"
+              >
+            </div>
+            <div class="committee-body">
+              <h3 class="committee-title">WHO</h3>
+              <p class="committee-description">
+                Directing and coordinating international health work within the United Nations.
+              </p>
+              <a href="about.html" class="committee-link" id="linkWHO">
+                View Details &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="footer" id="contact">
+    <p class="footer-text" id="footerText">&copy; 2026 MUNify Platform. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../../js/user-dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organiser & Admin Login - MUNify</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/login.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Header & Navbar
+       ========================================================================== -->
+  <header>
+    <nav class="navbar" id="mainNavbar">
+      <div class="navbar-container">
+        <!-- Brand Logo -->
+        <div class="navbar-brand">
+          <a href="../user/index.html" class="navbar-logo" id="brandLogo">MUNify</a>
+        </div>
+
+        <!-- Mobile Navigation Toggle -->
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          ☰
+        </button>
+
+        <!-- Center Navigation Links -->
+        <ul class="navbar-nav" id="navbarLinks">
+          <li><a href="../user/index.html" class="nav-link" id="navOverview">Overview</a></li>
+          <li><a href="../user/about.html" class="nav-link" id="navAbout">About</a></li>
+          <li><a href="../user/contact.html" class="nav-link" id="navContact">Contact Us</a></li>
+        </ul>
+
+        <!-- Right Action Buttons -->
+        <div class="navbar-actions">
+          <a href="../user/login.html" class="btn-yellow" id="btnLogin">Login</a>
+          <a href="../user/signup.html" class="btn-yellow" id="btnSignup">Signup</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==========================================================================
+       Main Content: Organiser / Admin Login Card
+       ========================================================================== -->
+  <main class="login-page">
+    <div class="login-card" id="adminLoginCard">
+      <h1 class="login-card-title" id="adminLoginHeading">Organiser Portal</h1>
+
+      <form class="login-form" id="adminLoginForm" novalidate>
+        <!-- Email Field -->
+        <div class="form-group">
+          <label for="adminEmail" class="form-label">Organiser / Admin Email</label>
+          <input 
+            type="email" 
+            id="adminEmail" 
+            name="email" 
+            class="form-input" 
+            placeholder="admin@gmail.com" 
+            required
+            autocomplete="email"
+          >
+        </div>
+
+        <!-- Password Field -->
+        <div class="form-group">
+          <label for="adminPassword" class="form-label">Password</label>
+          <input 
+            type="password" 
+            id="adminPassword" 
+            name="password" 
+            class="form-input" 
+            placeholder="Enter password" 
+            required
+            autocomplete="current-password"
+          >
+        </div>
+
+        <!-- Status Message Container -->
+        <div class="form-status-message" id="formStatusMessage" role="alert"></div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn-login-submit" id="btnSubmitAdminLogin">
+          Continue to Dashboard
+        </button>
+
+        <!-- Delegate Switch Link -->
+        <p class="signup-prompt" id="delegatePrompt">
+          Are you a Delegate? <a href="../user/login.html" class="signup-link" id="linkDelegateLogin">Delegate Login</a>
+        </p>
+      </form>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="../../js/login.js"></script>
+</body>
+</html>
