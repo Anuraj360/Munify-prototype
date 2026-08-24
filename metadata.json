@@ -1,6 +1,0 @@
-{
-  "name": "MUNify",
-  "description": "Digital platform for MUN conferences featuring real-time voting, digital motions, transparent scoring, and committee management.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
